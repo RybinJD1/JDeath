@@ -1,0 +1,25 @@
+create database jDeath;
+use jDeath;
+create table user (id int auto_increment not null, name varchar(45), surname varchar(45), primary key(id));
+create table account (id int auto_increment not null, account int, userId int, primary key(id), FOREIGN KEY (userId) REFERENCES user(id));
+
+INSERT INTO user (name, surname) VALUES ("Alex", "Grats");
+INSERT INTO user (name, surname) VALUES ("Jim", "Brown");
+INSERT INTO user (name, surname) VALUES ("Den", "Kuper");
+INSERT INTO user (name, surname) VALUES ("Fill", "Pike");
+INSERT INTO user (name, surname) VALUES ("Tom", "Cloud");
+INSERT INTO user (name, surname) VALUES ("Cris", "Riggs");
+INSERT INTO user (name, surname) VALUES ("Ben", "Lurd");
+INSERT INTO user (name, surname) VALUES ("Jo", "Aizeck");
+INSERT INTO user (name, surname) VALUES ("Ric", "Cristi");
+INSERT INTO user (name, surname) VALUES ("Sam", "Hardi");
+INSERT INTO account (account, userId) VALUES (5000, 2);
+INSERT INTO account (account, userId) VALUES (6, 3);
+INSERT INTO account (account, userId) VALUES (80000, 6);
+INSERT INTO account (account, userId) VALUES (562, 7);
+INSERT INTO account (account, userId) VALUES (45, 1);
+INSERT INTO account (account, userId) VALUES (7530, 4);
+INSERT INTO account (account, userId) VALUES (4892, 8);
+INSERT INTO account (account, userId) VALUES (789, 10);
+INSERT INTO account (account, userId) VALUES (50000, 5);
+INSERT INTO account (account, userId) VALUES (6218, 9);
